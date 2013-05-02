@@ -66,7 +66,7 @@ class PiwikRequest
                         "&fontSize=9".
                         "&aliasedGraph=1".
                         "&token_auth=".$this->config['piwik']['token_auth'];
-        
+        #50% width old 490px;
         $browser = $base.
                         "&method=ImageGraph.get".
                         "&graphType=horizontalBar".
@@ -76,7 +76,7 @@ class PiwikRequest
                         "&apiModule=UserSettings".
                         "&apiAction=getBrowser".
                         "&showLegend=1".
-                        "&width=490".
+                        "&width=1010".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -91,7 +91,7 @@ class PiwikRequest
                         "&apiModule=VisitTime".
                         "&apiAction=getVisitInformationPerServerTime".
                         "&showLegend=1".
-                        "&width=490".
+                        "&width=1010".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -106,7 +106,7 @@ class PiwikRequest
                         "&apiModule=UserCountry".
                         "&apiAction=getCountry".
                         "&showLegend=1".
-                        "&width=490".
+                        "&width=1010".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".

@@ -1,14 +1,153 @@
+<script type="text/javascript" src="<?php echo $this->jqUI ?>"></script>
+<link rel="stylesheet" href="<?php echo $this->jqUIcss ?>" />
+<script type="text/javascript" src="<?php echo $this->SRCspin ?>"></script>
+<script type="text/javascript" src="<?php echo $this->SRCspinmin ?>"></script>
+<script type="text/javascript" src="<?php echo $this->bootstrapJS ?>"></script>
+<link rel="stylesheet" href="<?php echo $this->bootstrapCSS ?>" />
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function() {
+        $('#chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        
+        $( "#tabs" ).tabs();
+        $("#tabs li a").click(function() {
+            $("#tabs li a").removeClass('active');
+            $(this).addClass("active");
+        });
+
+        $('#show_se_info_1').click(function(){
+            $('#se_legend_1,#chart1').show();
+            $('#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_2').click(function(){
+            $('#se_legend_2,#chart2').show();
+            $('#se_legend_1,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_3').click(function(){
+            $('#se_legend_3,#chart3').show()
+            $('#se_legend_1,#se_legend_2,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_4').click(function(){
+            $('#se_legend_4,#chart4').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_5').click(function(){
+            $('#se_legend_5,#chart5').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart6,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_6').click(function(){
+            $('#se_legend_6,#chart6').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart5,#chart7,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_7').click(function(){
+            $('#se_legend_7,#chart7').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_8,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart5,#chart6,#chart8,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_8').click(function(){
+            $('#se_legend_8,#chart8').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_9,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart9,#chart10').hide();
+        });
+        $('#show_se_info_9').click(function(){
+            $('#se_legend_9,#chart9').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_10').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart10').hide();
+        });
+        $('#show_se_info_10').click(function(){
+            $('#se_legend_10,#chart10').show();
+            $('#se_legend_1,#se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9').hide();
+            $('#chart1,#chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9').hide();
+        });        
+    });
+</script>
+
 <style>
     .clearfix:after {
         content: ".";
         display: block;
-        height: 0;
         clear: both;
         visibility: hidden;
+        line-height: 0;
+        height: 0;
     }
 
+    html,body{height: 100.1%}
+    body{background-color: #7F7F7F!important}
+
+    #lw_fe_inputelement_lw_formular_template{width: 800px;height: 600px;}
+    #tabs ul li a{color: #fff;}
+
+    .activeline {background: #e8f2ff !important;}
+
+    .active{background-color: #777;}
+
+    .description {
+        margin-bottom:5px;
+        border:1px solid #aaa;
+        border-radius: 5px;
+        background-color:#eee;
+        padding:10px;
+    }
+    
+    .description h1{
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 15px;
+    }
+    
+    .description p{margin-bottom: 10px;}
+    
+    .description #info{
+        border: 1px solid red;
+        padding: 10px 0 10px 300px;
+        font-size: 16px;
+        background-color: darkred;
+        color: #fff;
+    }
+
+    legend.lwadminform {
+        height: 20px;
+        margin-bottom: 2px;
+        line-height: 20px;
+        width: 130px;
+    }
+    html body div#lwContent div {
+        font-size: 12px!important;
+    }
+
+    fieldset.lwadminform {
+        position: relative;
+    }
+
+
+    html body div#lwLeftnavi div#lwPageTreeNav.lwBoxLeftContent center form#gotoform input#gotoid {
+        width: 45px;
+        margin-bottom: 0;
+    }
+    html body div#lwLeftnavi div#lwPageTreeNav.lwBoxLeftContent center {
+        height: 35px;
+    }    
+
+
+    #container_form, #container_main{
+        background-color: #fff;
+        border: 1px solid #bbb;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    #container_main{margin-top: 20px;}
+    #container_main h2{font-size: 14px;}
+
     .piwik_container_graph_100pt_column{
-        border: 1px solid #000;
+        border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #fff;
         padding: 5px;
@@ -18,14 +157,14 @@
     }
 
     .piwik_container_graph_50pt_column{
-        border: 1px solid #000;
+        border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #fff;
-        padding: 5px;
         width: 500px;
         float: left;
         margin: 15px 10px 5px 10px;
-        min-height: 215px;
+        min-height: 300px;
+        padding-left: 8px;
     }
 
     .piwik_container_graph_50pt_column table{margin: 10px 0;}
@@ -78,11 +217,11 @@
     #page_select{
         float: left;
         margin-left: 10px;
+        margin-top: 15px;
     }
 
     #container_formelements{
-        border: 1px solid #000;
-        background-color: #dfdfdf;
+
     }
 
     #container_formelements h2{
@@ -91,9 +230,9 @@
         font-weight: normal;
     }
 
-    .container{padding: 3px;margin: 5px 0;}
+    .container{ float: left;height: 40px;}
 
-    #submit_btn{padding: 3px;}
+    #submit_btn{padding: 3px;margin-top: 15px;}
 
     .container ul{
         list-style: none;
@@ -102,13 +241,10 @@
         float: left;
         padding: 0;
         margin: 0;
+        margin-top: 15px;
     }
 
     .container ul li{float: left;}
-
-    .container{border-bottom: 1px solid #ccc;}
-
-    .noborder{border: none;}
 
     #greyOverlay{
         display:none;
@@ -149,120 +285,30 @@
     
     #piwik_container{width: 1100px;}
     
-    #demo_info{
-        background-color: #dfdfdf;
-        border: 1px solid #333;
-        margin: 0 10px 0 12px ;
-        padding: 5px;
-    }
+    .margin_auto{width:1100px;margin: auto;}
     
-    #demo_info h1{
-        font-size: 20px;
-        font-style: italic;
-        margin-bottom: 15px;
-    }
+    #chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10{}
+    #se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10{display: none;}
     
-    #demo_info p{margin-bottom: 10px;}
-    
-    #demo_info #info{
-        border: 1px solid red;
-        padding: 10px 0 10px 300px;
-        font-size: 16px;
-        background-color: darkred;
-        color: #fff;
+    #pieContainer{position: relative;}
+    #pieContainer #legend{
+        position:absolute;
+        top: 25px;
+        right: 20px;
     }
 </style>
-<!--[if IE]>
-    <style>
-         #page_select,.container ul,.container ul li,#container_formelements h2{float: none!important;display:inline!important;}
-         .piwik_container_graph_100pt_column{width:1010px!important;}
-    </style>
- <![endif]-->
-<script type="text/javascript" src="<?php echo $this->SRCspin ?>"></script>
-<script type="text/javascript" src="<?php echo $this->SRCspinmin ?>"></script>
-<script>
-    $(document).ready(function(){
-        $('form').submit(function(){
-            $('#greyOverlay').show();
-            var opts = {
-                lines: 13, // The number of lines to draw
-                length: 16, // The length of each line
-                width: 14, // The line thickness
-                radius: 25, // The radius of the inner circle
-                corners: 1, // Corner roundness (0..1)
-                rotate: 0, // The rotation offset
-                color: '#ddd', // #rgb or #rrggbb
-                speed: 1, // Rounds per second
-                trail: 44, // Afterglow percentage
-                shadow: true, // Whether to render a shadow
-                hwaccel: false, // Whether to use hardware acceleration
-                className: 'spinner', // The CSS class to assign to the spinner
-                zIndex: 2e9, // The z-index (defaults to 2000000000)
-                top: '350', // Top position relative to parent in px
-                left: 'auto' // Left position relative to parent in px
-            };
-            var target = document.getElementById('greyOverlay');
-            var spinner = new Spinner(opts).spin(target);
-        })
-        
-        $('#show_se_info_1').click(function(){
-            $('#se_container_1').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_1').click(function(){
-            $('#se_container_1').show();
-            $('#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_2').click(function(){
-            $('#se_container_2').show();
-            $('#se_container_1,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_3').click(function(){
-            $('#se_container_3').show();
-            $('#se_container_1,#se_container_2,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_4').click(function(){
-            $('#se_container_4').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_5').click(function(){
-            $('#se_container_5').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_6').click(function(){
-            $('#se_container_6').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_7').click(function(){
-            $('#se_container_7').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_8').click(function(){
-            $('#se_container_8').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_9,#se_container_10').hide();
-        });
-        $('#show_se_info_9').click(function(){
-            $('#se_container_9').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_10').hide();
-        });
-        $('#show_se_info_10').click(function(){
-            $('#se_container_10').show();
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9').hide();
-        });
-        $('#close_all_infos').click(function(){
-            $('#se_container_1,#se_container_2,#se_container_3,#se_container_4,#se_container_5,#se_container_6,#se_container_7,#se_container_8,#se_container_9,#se_container_10').hide();
-        });
-    });
-</script>
+
 <div id="greyOverlay">&nbsp;</div>
 
-<div id="lwAdminMainInputWrapperNoTabs">
-    <div id="cformHeader" class="clearfix">
-        <form action="<?php echo $this->adress ?>" method="POST" >
+<fieldset class="lwadminform">
+
+    <legend class="lwadminform">Piwik Seitenstatistik</legend>
+    <div id="container_form">
+       <form action="<?php echo $this->adress ?>" method="POST" >
 
             <div id="container_formelements" class="clearfix">
                 <div class="container clearfix">
-                    <h2>Aktuelle angezeige f&uuml;r : [ <span><?php echo $this->pagename ?></span> ]</h2>
+                    <h2>Aktuelle angezeige f&uuml;r : [ <b><?php echo $this->pagename ?></b> ]</h2>
                 </div>
 
                 <?php if($this->no_default_portal): ?>
@@ -287,132 +333,179 @@
 
                 <div class="container clearfix noborder">
                     <input type="hidden" name="sent" value="1"/> 
-                    <input type="submit" value="Seitenstatistik anzeigen" id="submit_btn"/>   
+                    <input type="submit" value="Seitenstatistik anzeigen" id="submit_btn" class="btn btn-primary" onclick="
+                           $('#greyOverlay').show();
+                            var opts = {
+                                lines: 13, // The number of lines to draw
+                                length: 16, // The length of each line
+                                width: 14, // The line thickness
+                                radius: 25, // The radius of the inner circle
+                                corners: 1, // Corner roundness (0..1)
+                                rotate: 0, // The rotation offset
+                                color: '#ddd', // #rgb or #rrggbb
+                                speed: 1, // Rounds per second
+                                trail: 44, // Afterglow percentage
+                                shadow: true, // Whether to render a shadow
+                                hwaccel: false, // Whether to use hardware acceleration
+                                className: 'spinner', // The CSS class to assign to the spinner
+                                zIndex: 2e9, // The z-index (defaults to 2000000000)
+                                top: '350', // Top position relative to parent in px
+                                left: 'auto' // Left position relative to parent in px
+                            };
+                            var target = document.getElementById('greyOverlay');
+                            var spinner = new Spinner(opts).spin(target);"/>   
                 </div>
 
             </div>
         </form>
-
-    </div>        
-    <?php if($this->demo_info): ?>
-    <div id="demo_info">
-        <h1>Aktuell werden Demodaten von Piwik angezeigt !</h1>
-        <p> Es muss die Contentory Config angepasst werden. Die Config muss um folgenden Eintrag erweitert werden.</p>
-        <p id="info">
-            [piwik]<br>
-            token_auth = "anonymous"<br>
-            base = "http://demo.piwik.org/index.php?module=API"<br>
-            default_portal = ""<br>
-        </p>
-        <p>
-            - Ersetzen Sie "anonymous" mit dem token_auth Ihrer Piwik-Installation<br>
-            - Ersetzen Sie "http://demo.piwik.org/index.php" mit dem Pfad zu Ihrer Piwik-Installation<br>
-            - Tragen Sie bei default_portal den Namen ein, welchen Sie bei der Erstellung eines neuen Trackingeintrags,<br>
-  &nbsp;&nbsp;genutzt haben, wenn "NUR" dieser Eintrag angezeigt werden soll. Ein leeres default_portal stellt eine Auswahl,<br>
-  &nbsp;&nbsp;aller Trackingeintrage zur Verf&uuml;gung und erm&ouml;glicht das Anzeigen eines beliebigen Eintrags.
-        </p>
-    </div>
-    <?php endif; ?>
-    
-    <fieldset class="lwadminform">
-        <div id="piwik_container" class="clearfix">
-            <?php if($this->pageId): ?>
-            <div class="piwik_container_graph_100pt_column">
-                <h2>Seitenbesuche</h2>
-                <img src="<?php echo $this->page_visits; ?>">
-            </div>
-
-            <div class="piwik_container_graph_50pt_column">
-                <h2>User Browser</h2>
-                <img src="<?php echo $this->browser; ?>">
-            </div>
-
-            <div class="piwik_container_graph_50pt_column">
-                <h2>Aufrufszeiten</h2>
-                <img src="<?php echo $this->servertime_visits; ?>">
-            </div>
-
-            <div class="piwik_container_graph_100pt_column">
-                <h2>Verweisart</h2>
-                <img src="<?php echo $this->refers; ?>">
-            </div>
-
-            <div class="piwik_container_graph_50pt_column">
-                <div id="container_extend_min_height">
-                    <h2>Die 10 am h&auml;ufigsten genutzten Seiten</h2>
-                    <table>
-                        <thead>
-                        <th>Seitenname</th>
-                        <th>Seitenansichten</th>
-                        <th>Seitenbesuchsdauer</th>
-                        </thead>
-                        <tbody>
-                            <?php $i = 0; foreach($this->mostUsedPages as $page_info): ?>
-                            <?php if($i <= 9): ?>
-                            <tr>
-                                <td class="value_name"><?php echo $page_info["label"] ?></td>
-                                <td class="value"><?php echo $page_info["nb_visits"] ?></td>
-                                <td class="value"><?php echo $page_info["time_visit_sum_length_pretty"] ?></td>
-                            </tr>
-                            <?php $i++; endif; endforeach; ?>
-                        </tbody>
-                    </table>
-                    <hr>
-                    <h2 style="margin-top:10px;">Suchbegriffe<span id="close_all_infos">[close info]</span><br><span>(f&uuml;r Details Begriff anklicken)</span></h2>
-                    <?php if($this->searchWords): ?>
-                    <ol>
-                        <?php $k = 1; foreach ($this->searchWords as $searchword): ?>
-                        <?php if($k <= 10): ?>
-                        <li>
-                            <div id="show_se_info_<?php echo $k; ?>"><?php echo utf8_decode($searchword["label"]); ?> <span>(<?php echo $searchword["nb_visits"] ?>)</span></div>
-                            <span id="se_container_<?php echo $k; ?>" >
-                                <?php if(count($searchword["searchengine"]) >= 1): ?>
-                                    <?php foreach($searchword["searchengine"] as $searchengine): ?>
-                                        <img src="<?php echo $this->piwikBase.$searchengine["logo"]; ?>" > <span style="font-size: 11px;"><?php echo utf8_decode($searchengine["label"]) ?></span>  (<?php echo utf8_decode($searchengine["use_in_percent"]) ?>%) <br>
-                                    <?php endforeach; ?>
-                                <?php endif; ?>
-                            </span>
-                        </li>
-                        <?php $k++; endif; endforeach; ?>
-                    </ol>
-                    <?php endif; ?>
-                </div>
-            </div>
-
-
-            <div class="piwik_container_graph_50pt_column">
-                <h2>User L&auml;nder</h2>
-                <img src="<?php echo $this->countries ?>">
-            </div>
-
-            <div class="piwik_container_graph_50pt_column">
-                <h2 style="margin-top:10px;">Tagesinformationen <span>(<?php echo $this->pagename ?>)</span></h2>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td class="pad_r">Anzahl eindeutiger Besucher :</td>
-                            <td class="value"><?php echo $this->uniq_visitors ?></td>
-                        </tr>
-                        <tr>
-                            <td class="pad_r">Anzahl der Seitenbesuche :</td>
-                            <td class="value"><?php echo $this->visits ?></td>
-                        </tr>
-                        <tr>
-                            <td class="pad_r">Durchschn. Aktionen pro Besuch :</td>
-                            <td class="value"><?php echo $this->actions ?></td>
-                        </tr>
-                        <tr>
-                            <td class="pad_r">Durchschn. Besuchsdauer (sek) :</td>
-                            <td class="value"><?php echo $this->visit_time ?></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <?php else: ?>
-                <div class="piwik_container_graph_100pt_column">
-                    <h2>Bitte w&auml;hlen Sie eine Seite aus, f&uuml; die Sie die Statistiken einsehen wollen.</h2>
-                </div>
-            <?php endif; ?>
+        
+        <?php if($this->demo_info): ?>
+        <div class="description">
+            <h1>Aktuell werden Demodaten von Piwik angezeigt !</h1>
+            <p> Es muss die Contentory Config angepasst werden. Die Config muss um folgenden Eintrag erweitert werden.</p>
+            <p id="info">
+                [piwik]<br>
+                token_auth = "anonymous"<br>
+                base = "http://demo.piwik.org/index.php?module=API"<br>
+                default_portal = ""<br>
+            </p>
+            <p>
+                - Ersetzen Sie "anonymous" mit dem token_auth Ihrer Piwik-Installation<br>
+                - Ersetzen Sie "http://demo.piwik.org/index.php" mit dem Pfad zu Ihrer Piwik-Installation<br>
+                - Tragen Sie bei default_portal den Namen ein, welchen Sie bei der Erstellung eines neuen Trackingeintrags,<br>
+      &nbsp;&nbsp;genutzt haben, wenn "NUR" dieser Eintrag angezeigt werden soll. Ein leeres default_portal stellt eine Auswahl,<br>
+      &nbsp;&nbsp;aller Trackingeintrage zur Verf&uuml;gung und erm&ouml;glicht das Anzeigen eines beliebigen Eintrags.
+            </p>
         </div>
-    </fieldset>
-</div>	
+        <?php endif; ?>
+    </div>
+    <div id="container_main" class="clearfix">
+        <?php if($this->pageId): ?>
+        
+        <div id="tabs" >
+            <ul>
+                <li><a href="#portal" class="active">Portal</a></li>
+                <li><a href="#visitor">Besucher</a></li>
+                <li><a href="#searchengine">Suchmaschine</a></li>
+            </ul>
+        
+            <div id="portal" class="clearfix">
+                <div class="margin_auto">
+                    <div class="piwik_container_graph_100pt_column">
+                        <h2>Seitenbesuche</h2>
+                        <img src="<?php echo $this->page_visits; ?>">
+                    </div>
+
+                    <div class="piwik_container_graph_100pt_column">
+                        <h2>Verweisart</h2>
+                        <img src="<?php echo $this->refers; ?>">
+                    </div>
+
+                    <div class="piwik_container_graph_50pt_column" >
+                        <h2>Die 10 am h&auml;ufigsten genutzten Seiten</h2>
+                        <table>
+                            <thead>
+                            <th>Seitenname</th>
+                            <th>Seitenansichten</th>
+                            <th>Seitenbesuchsdauer</th>
+                            </thead>
+                            <tbody>
+                                <?php $i = 0; foreach($this->mostUsedPages as $page_info): ?>
+                                <?php if($i <= 9): ?>
+                                <tr>
+                                    <td class="value_name"><?php echo $page_info["label"] ?></td>
+                                    <td class="value"><?php echo $page_info["nb_visits"] ?></td>
+                                    <td class="value"><?php echo $page_info["time_visit_sum_length_pretty"] ?></td>
+                                </tr>
+                                <?php $i++; endif; endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="piwik_container_graph_50pt_column" style="margin-right:0;">
+                        <h2 style="margin-top:10px;">Tagesinformationen <span>(<?php echo $this->pagename ?>)</span></h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="pad_r">Anzahl eindeutiger Besucher :</td>
+                                    <td class="value"><?php echo $this->uniq_visitors ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="pad_r">Anzahl der Seitenbesuche :</td>
+                                    <td class="value"><?php echo $this->visits ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="pad_r">Durchschn. Aktionen pro Besuch :</td>
+                                    <td class="value"><?php echo $this->actions ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="pad_r">Durchschn. Besuchsdauer (sek) :</td>
+                                    <td class="value"><?php echo $this->visit_time ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="visitor" class="clearfix">
+                <div class="margin_auto">
+                    <div class="piwik_container_graph_100pt_column">
+                        <h2>User Browser</h2>
+                        <img src="<?php echo $this->browser; ?>">
+                    </div>
+
+                    <div class="piwik_container_graph_100pt_column">
+                        <h2>Aufrufszeiten</h2>
+                        <img src="<?php echo $this->servertime_visits; ?>">
+                    </div>
+
+                    <div class="piwik_container_graph_100pt_column">
+                        <h2>User L&auml;nder</h2>
+                        <img src="<?php echo $this->countries ?>">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="searchengine" class="clearfix">
+                <div class="margin_auto">
+                    <div class="piwik_container_graph_50pt_column" style="width:300px;border:none;">
+                        <h2 style="margin-top:10px;">Suchbegriffe<br><span>(f&uuml;r Details Begriff anklicken)</span></h2>
+                        <?php if($this->searchWords): ?>
+                        <ol>
+                            <?php $k = 1; foreach ($this->searchWords as $searchword): ?>
+                            <?php if($k <= 10): ?>
+                            <li>
+                                <div id="show_se_info_<?php echo $k; ?>"><?php echo utf8_decode($searchword["label"]); ?> <span>(<?php echo $searchword["nb_visits"] ?>)</span></div>
+                            </li>
+                            <?php $k++; endif; endforeach; ?>
+                        </ol>
+                        <?php endif; ?>
+                    </div>
+                    <div id="pieContainer" class="piwik_container_graph_50pt_column" style="width:730px;border:none;">
+                        <?php if($this->searchWords): ?>
+                        <?php echo $this->searchPies; ?>
+                        <div id="legend">
+                            <?php $k = 1; foreach ($this->searchWords as $searchword): ?>
+                            <?php if($k <= 10): ?>
+                                <span id="se_legend_<?php echo $k; ?>" >
+                                    <?php $i = 0;if(count($searchword["searchengine"]) >= 1): ?>
+                                        <?php foreach($searchword["searchengine"] as $searchengine): ?>
+                                    <div style="margin-top:3px;margin-right:5px;float:left;width:15px;height: 15px;background-color: <?php echo $this->colorArray[$i];?>">&nbsp;</div><img src="<?php echo $this->piwikBase.$searchengine["logo"]; ?>" > <span style="font-size: 11px;"><?php echo utf8_decode($searchengine["label"]) ?></span>  (<?php echo utf8_decode(round($searchengine["use_in_percent"])) ?>%) <br>
+                                        <?php $i++;endforeach; ?>
+                                    <?php endif; ?>
+                                </span>
+                            <?php $k++; endif; endforeach; ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <?php else: ?>
+            <h2>Bitte w&auml;hlen Sie eine Seite aus, f&uuml; die Sie die Statistiken einsehen wollen.</h2>
+        <?php endif; ?>
+    </div>
+</fieldset>
