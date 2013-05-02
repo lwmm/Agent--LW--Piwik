@@ -266,6 +266,12 @@ class PiwikRequest
                     "&token_auth=".$this->config['piwik']['token_auth'];
         
         $portals = unserialize(file_get_contents($base.$request));
+        
+        foreach ($portals as $nr => $page){
+            $name[$nr] = $page['name'];
+        }
+        array_multisort($name, SORT_ASC, $portals);
+        
         return $portals;
     }
     
