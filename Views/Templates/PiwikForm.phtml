@@ -151,18 +151,18 @@
         border-radius: 5px;
         background-color: #fff;
         padding: 5px;
-        width: 1030px;
+        width: 990px;
         float: left;
-        margin: 10px 0 0 10px;
+        margin: 10px 0 0 0px;
     }
 
     .piwik_container_graph_50pt_column{
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #fff;
-        width: 500px;
+        width: 485px;
         float: left;
-        margin: 15px 10px 5px 10px;
+        margin: 15px 10px 5px 0px;
         min-height: 300px;
         padding-left: 8px;
     }
@@ -283,9 +283,11 @@
         margin-left: 300px;
     }
     
-    #piwik_container{width: 1100px;}
+    #piwik_container{width: 1000px;}
     
-    .margin_auto{width:1100px;margin: auto;}
+    .margin_auto{width:1000px;margin: auto; padding: 0;}
+    
+    #portal {padding: 0;}
     
     #chart2,#chart3,#chart4,#chart5,#chart6,#chart7,#chart8,#chart9,#chart10{}
     #se_legend_2,#se_legend_3,#se_legend_4,#se_legend_5,#se_legend_6,#se_legend_7,#se_legend_8,#se_legend_9,#se_legend_10{display: none;}
@@ -483,7 +485,7 @@
                         </ol>
                         <?php endif; ?>
                     </div>
-                    <div id="pieContainer" class="piwik_container_graph_50pt_column" style="width:730px;border:none;">
+                    <div id="pieContainer" class="piwik_container_graph_50pt_column" style="width:660px;border:none;">
                         <?php if($this->searchWords): ?>
                         <?php echo $this->searchPies; ?>
                         <div id="legend">

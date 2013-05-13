@@ -61,7 +61,7 @@ class PiwikRequest
                         "&apiModule=VisitsSummary".
                         "&apiAction=get".
                         "&showLegend=1".
-                        "&width=1010".
+                        "&width=980".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -76,7 +76,7 @@ class PiwikRequest
                         "&apiModule=UserSettings".
                         "&apiAction=getBrowser".
                         "&showLegend=1".
-                        "&width=1010".
+                        "&width=980".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -91,7 +91,7 @@ class PiwikRequest
                         "&apiModule=VisitTime".
                         "&apiAction=getVisitInformationPerServerTime".
                         "&showLegend=1".
-                        "&width=1010".
+                        "&width=980".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -106,7 +106,7 @@ class PiwikRequest
                         "&apiModule=UserCountry".
                         "&apiAction=getCountry".
                         "&showLegend=1".
-                        "&width=1010".
+                        "&width=980".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
@@ -121,7 +121,7 @@ class PiwikRequest
                         "&apiModule=Referers".
                         "&apiAction=getRefererType".
                         "&showLegend=1".
-                        "&width=1010".
+                        "&width=980".
                         "&height=200".
                         "&fontSize=9".
                         "&aliasedGraph=1".
