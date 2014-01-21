@@ -15,7 +15,7 @@
 <script>
       <?php foreach( $this->seArray as $nr => $se ) :?>  
       var data = <?php $str = "["; foreach ($se as $engine) {
-              $title = $engine["title"];
+              $title = htmlentities(utf8_decode($engine["title"]));
                     $str.= "['".$engine["label"]."', ".$engine["visits"]."],";
                 }
             echo substr($str, 0, -1)."]";
