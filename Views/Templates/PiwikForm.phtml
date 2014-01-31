@@ -318,7 +318,7 @@
                     <h2>Portal :</h2>
                     <select id="page_select" name="selected_page" size="1">
                         <?php foreach($this->allPortals as $page): ?>
-                        <option value="<?php echo $page["idsite"]; ?>" <?php if($this->pageId == $page["idsite"]): ?>selected<?php endif; ?>><?php echo htmlentities(utf8_decode($page["name"])); ?></option>
+                        <option value="<?php echo $page["idsite"]; ?>" <?php if($this->pageId == $page["idsite"]): ?>selected<?php endif; ?>><?php echo utf8_decode($page["name"]); ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
