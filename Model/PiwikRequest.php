@@ -118,8 +118,8 @@ class PiwikRequest
                         "&idSite=".$page_id.
                         "&period=".$period_refers.
                         "&date=".$date_refers.
-                        "&apiModule=Referers".
-                        "&apiAction=getRefererType".
+                        "&apiModule=Referrers".
+                        "&apiAction=getReferrerType".
                         "&showLegend=1".
                         "&width=980".
                         "&height=200".
